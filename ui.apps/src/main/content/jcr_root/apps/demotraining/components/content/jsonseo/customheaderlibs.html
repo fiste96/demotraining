@@ -13,7 +13,7 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 */-->
-<div data-sly-use.info="validation.js">
+<div data-sly-use.jsonSeoObject="com.aem.demo.core.component.JsonSeoComponent" data-sly-test="${jsonSeoObject}">
 
 <script type="application/ld+json">
     {
@@ -25,14 +25,14 @@
             "https://example.com/photos/4x3/photo.jpg",
             "https://example.com/photos/16x9/photo.jpg"
         ],
-        "description": "${info.description @ context = 'attribute' }",
-        "color": "${info.color @ context = 'elementName'}",
-        "model": "${info.model @ context = 'attribute' }",
+        "description": "",
+        "color": "",
+        "model": "",
         "sku": "0446310786",
         "mpn": "925872",
         "brand": {
             "@type": "Brand",
-            "name": "${info.title @ context = 'attribute' }"
+            "name": ""
         },
         "review": {
             "@type": "Review",
@@ -48,14 +48,14 @@
         },
         "aggregateRating": {
             "@type": "AggregateRating",
-            "ratingValue": "${info.ratingValue @ context = 'attribute' }",
-            "reviewCount": "${info.reviewCount @ context = 'attribute' }"
+            "ratingValue": "",
+            "reviewCount": ""
         },
         "offers": {
             "@type": "Offer",
             "url": "https://example.com/anvil",
-            "priceCurrency": "${info.currency @ context = 'attribute' }",
-            "price": "88",
+            "priceCurrency": "",
+            "price": "${jsonSeoObject.jsonSeo.type @ context = 'attribute'}",
             "priceValidUntil": "2020-11-20",
             "itemCondition": "https://schema.org/UsedCondition",
             "availability": "https://schema.org/InStock"

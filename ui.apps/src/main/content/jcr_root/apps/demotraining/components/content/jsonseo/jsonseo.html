@@ -15,9 +15,55 @@
 */-->
 <input is="coral-textfield" placeholder="Enter your name" name="field" value="">
 
+<div data-sly-use.jsonSeoObject="com.aem.demo.core.component.JsonSeoComponent" data-sly-test="${jsonSeoObject}">
+    <h1>${jsonSeoObject.jsonSeo.type}</h1>
+    <h1>${properties.price}</h1>
 
-
-<div data-sly-use.JsonSeo="com.aem.demo.core.component.JsonSeoComponent">
-    <h1>${JsonSeo.type}</h1>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org/",
+            "@type": "Product",
+            "name": "Executive Anvil",
+            "image": [
+                "https://example.com/photos/1x1/photo.jpg",
+                "https://example.com/photos/4x3/photo.jpg",
+                "https://example.com/photos/16x9/photo.jpg"
+            ],
+            "description": "",
+            "color": "",
+            "model": "",
+            "sku": "0446310786",
+            "mpn": "925872",
+            "brand": {
+                "@type": "Brand",
+                "name": ""
+            },
+            "review": {
+                "@type": "Review",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "4",
+                    "bestRating": "5"
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "Fred Benson"
+                }
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "",
+                "reviewCount": ""
+            },
+            "offers": {
+                "@type": "Offer",
+                "url": "https://example.com/anvil",
+                "priceCurrency": "",
+                "price": "${properties.price @ context = 'attribute'}",
+                "priceValidUntil": "2020-11-20",
+                "itemCondition": "https://schema.org/UsedCondition",
+                "availability": "https://schema.org/InStock"
+            }
+        }
+    </script>
 </div>
-
