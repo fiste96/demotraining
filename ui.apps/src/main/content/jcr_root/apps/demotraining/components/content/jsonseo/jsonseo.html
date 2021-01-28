@@ -15,7 +15,7 @@
 */-->
 <input is="coral-textfield" placeholder="Enter your name" name="field" value="">
 
-<div data-sly-use.jsonSeoObject="com.aem.demo.core.component.JsonSeoComponent" data-sly-test="${jsonSeoObject}">
+<div data-sly-use.jsonSeoObject="com.aem.demo.core.models.JsonSeoModel" data-sly-test="${jsonSeoObject}">
     <h1>${jsonSeoObject.jsonSeo.type}</h1>
     <h1>${properties.price}</h1>
 
@@ -29,14 +29,14 @@
                 "https://example.com/photos/4x3/photo.jpg",
                 "https://example.com/photos/16x9/photo.jpg"
             ],
-            "description": "",
-            "color": "",
-            "model": "",
+            "description": "${jsonSeoObject.jsonSeo.description @ context = 'attribute'}",
+            "color": "${jsonSeoObject.jsonSeo.color @ context = 'attribute'}",
+            "model": "${jsonSeoObject.jsonSeo.model @ context = 'attribute'}",
             "sku": "0446310786",
             "mpn": "925872",
             "brand": {
                 "@type": "Brand",
-                "name": ""
+                "name": "${jsonSeoObject.jsonSeo.brand @ context = 'attribute'}"
             },
             "review": {
                 "@type": "Review",
@@ -52,14 +52,14 @@
             },
             "aggregateRating": {
                 "@type": "AggregateRating",
-                "ratingValue": "",
-                "reviewCount": ""
+                "ratingValue": "${jsonSeoObject.jsonSeo.ratingValue @ context = 'attribute'}",
+                "reviewCount": "${jsonSeoObject.jsonSeo.reviewCount @ context = 'attribute'}"
             },
             "offers": {
                 "@type": "Offer",
                 "url": "https://example.com/anvil",
-                "priceCurrency": "",
-                "price": "${properties.price @ context = 'attribute'}",
+                "priceCurrency": "${jsonSeoObject.jsonSeo.currency @ context = 'attribute'}",
+                "price": "${jsonSeoObject.jsonSeo.price @ context = 'attribute'}",
                 "priceValidUntil": "2020-11-20",
                 "itemCondition": "https://schema.org/UsedCondition",
                 "availability": "https://schema.org/InStock"

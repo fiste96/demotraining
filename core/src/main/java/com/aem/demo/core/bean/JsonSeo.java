@@ -19,11 +19,101 @@ public class JsonSeo {
 
     private String type;
 
+    private String description;
+
+    private String brand;
+
+    private String model;
+
+    private String color;
+
+    private String price;
+
+    private String currency;
+
+    private String reviewCount;
+
+    private String ratingValue;
+
+    private String image;
+
     public String getType() {
         return type;
     }
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
+    }
+
+    public String getCurrency() {
+        return currency;
+    }
+
+    public void setCurrency(String currency) {
+        this.currency = currency;
+    }
+
+    public String getReviewCount() {
+        return reviewCount;
+    }
+
+    public void setReviewCount(String reviewCount) {
+        this.reviewCount = reviewCount;
+    }
+
+    public String getRatingValue() {
+        return ratingValue;
+    }
+
+    public void setRatingValue(String ratingValue) {
+        this.ratingValue = ratingValue;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 }

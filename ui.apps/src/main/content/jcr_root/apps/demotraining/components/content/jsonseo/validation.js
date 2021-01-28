@@ -26,6 +26,8 @@ use(function () {
     product.currency = resource.properties["currency"];
     product.price = resource.properties["price"];
     product.description = resource.properties["description"];
+    product.img ="http://localhost:4502" + resource.properties["fileReference"];
+    console.log(product.img);
     return product;
 });
 

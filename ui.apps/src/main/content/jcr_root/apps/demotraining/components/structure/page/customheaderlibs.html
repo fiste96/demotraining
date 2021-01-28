@@ -60,7 +60,7 @@
             "offers": {
                 "@type": "Offer",
                 "url": "https://example.com/anvil",
-                "priceCurrency": "",
+                "priceCurrency": "${jsonSeoObject.jsonSeo.currency @ context = 'attribute'}",
                 "price": "${jsonSeoObject.jsonSeo.type @ context = 'attribute'}",
                 "priceValidUntil": "2020-11-20",
                 "itemCondition": "https://schema.org/UsedCondition",
